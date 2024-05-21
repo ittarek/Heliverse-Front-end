@@ -1,0 +1,71 @@
+   /* Banner section start here */
+   .banner-1st-side h3 {
+       background: linear-gradient(90deg, #F87516 0%, #5E11FF 100%);
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+       font-family: "Sora", Sans-serif;
+
+
+   }
+
+   .banner-1st-side h4 {
+       color: #EEE5FF;
+       font-family: "Outfit", Sans-serif;
+   }
+
+  
+   .banner-2nd-side h1 {
+       font-family: "Outfit", Sans-serif;
+       line-height: 75px;
+
+   }
+
+   .banner-2nd-side h1 span {
+       background: linear-gradient(90deg, #F87516 0%, #5E11FF 100%);
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+       font-family: "Sora", Sans-serif;
+
+
+   }
+
+   .banner-2nd-side p {
+       color: #EEE5FFBD;
+       font-family: "Outfit", Sans-serif;
+       font-size: 18px;
+       font-weight: 300;
+       line-height: 1.6em;
+
+
+
+   }
+
+   /* Banner section end here */
+
+   /* price section start here */
+   .price button {
+       font-family: "Sora", Sans-serif;
+    
+   
+       background-image: linear-gradient(90deg, #5E11FF 30%, #F87516 100%);
+       border-radius: 20px 20px 20px 20px;
+       
+   }
+
+   .price-p {
+       color: #EEE5FFBD;
+       font-family: "Sora", Sans-serif;
+       font-size: 18px;
+
+       line-height: 30px;
+
+   }
+
+   /* price section end here */
+
+   /* Footer  start here */
+   .footer {
+       background: linear-gradient(90deg, #F87516 0%, #5E11FF 100%);
+  }
+
+   /* Footer  end here */
