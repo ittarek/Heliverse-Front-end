@@ -35,7 +35,7 @@ const Rating = () => {
         >
           Trusted by thousands of users around the world
         </h1>
-        <div className="w-full md:grid lg:flex grid-rows-2 mx-auto justify-between items-center gap-3">
+        <div className="w-full md:grid lg:flex grid-rows-2 mx-auto justify-between items-center gap-6 space-y-6">
           {ratingData.map((data, index) => (
             <div
               key={data.id}
