@@ -1,81 +1,52 @@
+import { useEffect } from "react";
+import { useRef } from "react";
+import webglFluidUmd from "webgl-fluid/dist/webgl-fluid.umd.js";
+const GradientCursor = () => {
+  const canvasRef = useRef();
 
-import React, { useEffect, useRef } from 'react'
-import gsap from 'gsap';
+  useEffect(() => {
+    webglFluidUmd(canvasRef.current, {
+      TRIGGER: "hover",
+      IMMEDIATE: true,
+      AUTO: false,
+      INTERVAL: 3000,
+      SIM_RESOLUTION: 256,
+      DYE_RESOLUTION: 700,
+      CAPTURE_RESOLUTION: 400,
+      DENSITY_DISSIPATION: 3,
+      VELOCITY_DISSIPATION: 0.99,
+      PRESSURE: 0.5,
+      PRESSURE_ITERATIONS: 25,
+      CURL: 30,
+      SPLAT_RADIUS: 0.4,
+      SPLAT_FORCE: 8000,
+      SPLAT_COUNT: 20,
+      SHADING: true,
+      COLORFUL: true,
+      COLOR_UPDATE_SPEED: 5,
+      PAUSED: false,
+      BACK_COLOR: { r: 0, g: 0, b: 0 },
+      TRANSPARENT: false,
+      BLOOM: true,
+      BLOOM_ITERATIONS: 6,
+      BLOOM_RESOLUTION: 256,
+      BLOOM_INTENSITY: 0.6,
+      BLOOM_THRESHOLD: 0.5,
+      BLOOM_SOFT_KNEE: 0.9,
+      SUNRAYS: true,
+      SUNRAYS_RESOLUTION: 197,
+      SUNRAYS_WEIGHT: 1.5,
+    });
+  }, []);
 
-const colors = [
-    "#c32d27",
-    "#f5c63f",
-    "#457ec4",
-    "#356fdb",
-]
+  return (
+    <canvas
+      className="w-full h-screen top-0 left-0  fixed  z-0"
+      ref={canvasRef}
+    >
+      {" "}
+    </canvas>
+  );
+};
 
-export default function GradientCursor({isActive}) {
-    const mouse = useRef({x: 0, y: 0});
-    const delayedMouse = useRef({x: 0, y: 0});
-    const rafId = useRef(null);
-    const circles = useRef([]);
-    const size = isActive ? 100 : 30;
-    const delay = isActive ? 0.015 : 0.005
-
-    const lerp = (x, y, a) => x * (1 - a) + y * a;
-
-    const manageMouseMove = (e) => {
-        const { clientX, clientY } = e;
-    
-        mouse.current = {
-            x: clientX,
-            y: clientY
-        }
-    }
-
-    const animate = () => {
-        const { x, y } = delayedMouse.current;
-
-        delayedMouse.current = {
-            x: lerp(x, mouse.current.x, 0.075),
-            y: lerp(y, mouse.current.y, 0.075)
-        }
-
-        moveCircles(delayedMouse.current.x, delayedMouse.current.y);
-        
-        rafId.current = window.requestAnimationFrame(animate);
-    }
-
-    const moveCircles = (x, y) => {
-        if(circles.current.length < 1) return;
-        circles.current.forEach((circle, i) => {
-            gsap.set(circle, {x, y, xPercent: -50, yPercent: -55})
-        })
-    }
-
-    useEffect( () => {
-        animate();
-        window.addEventListener("mousemove", manageMouseMove);
-        return () => {
-            window.removeEventListener("mousemove", manageMouseMove);
-            window.cancelAnimationFrame(rafId.current)
-        }
-    }, [isActive])
-
-    return (
-        <div className='relative'>
-            {
-                [...Array(4)].map((_, i) => {
-                    return (
-                    <div 
-                        style={{
-                            backgroundColor: colors[i],
-                            width: size,
-                            height: size,
-                            filter: `blur(${isActive ? 25 : 2}px)`,
-                            transition: `transform ${(6 - i) * delay}s linear, height 0.3s ease-out, width 0.3s ease-out, filter 0.3s ease-out`
-                        }}
-                        className='top-0 left-0 fixed rounded-full mix-blend-difference' 
-                        key={i} 
-                        ref={ref => circles.current[i] = ref}
-                    />)
-                })
-            }
-        </div>
-    )
-}
+export default GradientCursor;

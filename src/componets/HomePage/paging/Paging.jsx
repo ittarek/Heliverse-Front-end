@@ -1,11 +1,10 @@
-import React from "react";
 import Container from "../../Shared/Container";
 import section from "../../../assets/motionarteffect-img11.png";
 import page from "../../../assets/motionarteffect-img10.png";
 const Paging = () => {
   return (
     <Container>
-      <section className="my-[100px]">
+      <section className="my-[100px] bg-transparent">
         <h1
           className="md:text-[35px] text-center mb-11 font-semibold md:w-[700px] mx-auto  text-[22px]"
           style={{
@@ -19,7 +18,7 @@ const Paging = () => {
           <div
             className="bg-transparent bg-gradient-to-b from-[#0D061F] to-[#251E35] p-6  rounded-xl  border border-[#FFFFFF10]"
             style={{
-              transition: "background 0.3s",
+           
               borderWidth: "2px 2px 2px 2px",
               boxShadow: "0.3s",
             }}
@@ -43,7 +42,7 @@ const Paging = () => {
           <div
             className="bg-transparent bg-gradient-to-b from-[#0D061F] to-[#251E35] p-6 rounded-xl   border-[#FFFFFF10] mt-[70px]"
             style={{
-              transition: "background 0.3s",
+          
               borderWidth: "2px 2px 2px 2px",
               boxShadow: "0.3s",
               borderRadius: "20px 20px 20px 20px",
