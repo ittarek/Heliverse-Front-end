@@ -15,7 +15,11 @@ const Banner = () => {
           </h4>
         </div>
         <div className="banner-2nd-side text-center md:text-left w-full ">
-          <h1 className="md:text-[40px] text-[43px] md:text-start">
+          <h1 className="md:text-[40px] text-[43px] md:text-start"
+          style={{fontFamily:"Sora, sans-serif",
+            fontWeight:500
+          }}
+          >
             {" "}
             Attract Your Visitors <br /> Attention With Colorful <br />{" "}
             <span>Motion Art Effect</span>{" "}

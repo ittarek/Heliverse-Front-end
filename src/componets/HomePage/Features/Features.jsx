@@ -31,7 +31,7 @@ const Features = () => {
         <div className="text-center mb-8">
           <h1
             className="md:text-[40px] text-[30px] font-bold"
-            style={{ fontFamily: "Outfit, Sans-serif" }}
+            style={{ fontFamily: "Sore, Sans-serif", fontWeight: 500 }}
           >
             An All-Round Plugin With Powerful <br /> Features
           </h1>

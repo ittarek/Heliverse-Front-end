@@ -13,7 +13,7 @@
        font-family: "Outfit", Sans-serif;
    }
 
-  
+
    .banner-2nd-side h1 {
        font-family: "Outfit", Sans-serif;
        line-height: 75px;
@@ -41,15 +41,31 @@
    }
 
    /* Banner section end here */
+   /* rating section  */
+   @media screen and (max-width:500px) {
 
+       #ratings {
+
+           display: flex;
+           justify-content: center;
+           align-items: center;
+
+
+       }
+
+
+   }
+
+
+   /* rating section end*/
    /* price section start here */
    .price button {
        font-family: "Sora", Sans-serif;
-    
-   
+
+
        background-image: linear-gradient(90deg, #5E11FF 30%, #F87516 100%);
        border-radius: 20px 20px 20px 20px;
-       
+
    }
 
    .price-p {
@@ -61,11 +77,32 @@
 
    }
 
+   @media screen and (min-width:500px) {
+
+       .price-btn {
+
+           width: 70%;
+
+           margin-left: 15%;
+           margin-right: auto;
+
+
+       }
+
+       .price-btn span {
+
+           margin-top: 10px;
+           margin-right: -27px;
+       }
+
+
+   }
+
    /* price section end here */
 
    /* Footer  start here */
    .footer {
        background: linear-gradient(90deg, #F87516 0%, #5E11FF 100%);
-  }
+   }
 
    /* Footer  end here */

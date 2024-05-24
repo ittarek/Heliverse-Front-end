@@ -23,7 +23,9 @@ const BrowserSupport = () => {
       >
         <p
           className="text-3xl bg-transparent"
-          style={{ fontFamily: "Outfit, Sans-serif" }}
+          style={{ fontFamily: "Outfit, Sans-serif",
+            fontWeight:500
+           }}
         >
           Supported by All Popular Browsers
         </p>

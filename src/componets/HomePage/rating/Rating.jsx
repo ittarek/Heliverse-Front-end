@@ -35,20 +35,21 @@ const Rating = () => {
         >
           Trusted by thousands of users around the world
         </h1>
-        <div className="w-full md:grid lg:flex grid-rows-2 mx-auto justify-between items-center gap-6 space-y-6">
+        <div className="rating w-full md:grid lg:flex grid-rows-2 mx-auto justify-between items-center gap-6 space-y-6">
           {ratingData.map((data, index) => (
             <div
               key={data.id}
-              className={`flex items-center gap-6 ${
+              id="ratings"
+              className={` flex items-center gap-6 mx-auto ${
                 index === 2
                   ? "md:col-span-2 md:w-full md:justify-center"
                   : "w-full"
-              } mx-auto`}
+              } `}
             >
               <img
                 src={data.subImage}
-                alt="sub image"
-                className="w-20 h-20 object-cover"
+                alt="sub-image"
+                className="w-20 h-20 m-0 p-0"
               />
               <div className="space-y-3">
                 <img src={data.ratingImage} alt="star" className="" />

@@ -11,10 +11,10 @@ const Navbar = () => {
           alt="Motion Art Effect Logo"
         />
 
+     
+
         <button
-          className="hidden md:hidden lg:block text-[18px] font-normal text-[#0D051F] bg-[#FFFFFF] border-2 border-[#FFFFFF] rounded-[5px] px-[35px] py-[12px] hover:text-[#FFFFFF] 
-        hover:bg-[#0D051F00] duration-300
-   "
+          className="hidden md:hidden lg:block px-6 py-3  bg-white text-[#0D051F]       border transparent border-white hover:bg-transparent hover:text-white pointer-events-auto text-xl mt-3 rounded-md duration-300 ease-in"
           style={{
             fontFamily: "Outfit, Sans-serif",
           }}
